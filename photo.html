@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Photo Gallery</title>
+    <!-- Bootstrap -->
+     <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="css/stylish-portfolio.css">
+     <link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet">
+     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="css/mycss.css">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+ <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li><a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a><li>
+            <li class="sidebar-brand">
+                <a href="#top" onclick=$("#menu-close").click();>Menu</a>
+            </li>
+            <li>
+                <a href="index.html" onclick=$("#menu-close").click();>Home</a>
+            </li>
+            <li>
+                <a href="aboutme.html" onclick=$("#menu-close").click();>About Me</a>
+            </li>
+            <li>
+                <a id="active" href="photo.html" onclick=$("#menu-close").click();>Photo</a>
+            </li>
+            <li>
+                <a href="project.html" onclick=$("#menu-close").click();>Projects</a>
+            </li>
+        </ul>
+    </nav>
+    <header class="header photoheader">
+        <div>
+            <img id="P2" class="image-responsive" src="img/P.png" alt="icon">
+            <img id='olymp' class='image-reponsive' src="img/olymp.jpg" alt="olymps camera">
+        </div>
+    </header>
+  <h1 class='text-center' id="phototitle">My Photo Selection</h1>
+        <div class="container content">
+
+            <div class="row detail">
+                <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                    <img class="img-responsive" src="img/1.jpg" alt="stockholm">
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12 thumb">          
+                    <img class="img-responsive" src="img/8.jpg" alt="kids">
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12 thumb">         
+                    <img class="img-responsive" src="img/3.jpg" alt="iceland lake">
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                    <img class="img-responsive" src="img/4.jpg" alt="norway">
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                    <img class="img-responsive" src="img/5.jpg" alt="amesterdem">
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                    <img class="img-responsive" src="img/6.jpg" alt="New navy">
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                    <img class="img-responsive" src="img/7.jpg" alt="Aurora">
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12 thumb">
+                    <img class="img-responsive" src="img/2.jpg" alt="iceland">
+                </div>
+            </div>
+        </div>
+     <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div id='fmessage'>
+                        <p>Thanks for visiting.</p>
+                        <p>Don't be shy! Send me a message.</p>
+                    </div>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://www.facebook.com/carl.ko.3"><i class="fa fa-facebook-square fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://tw.linkedin.com/in/pingjui-ko-972a3299"><i class="fa fa-linkedin-square fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; Ping 2017</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- <script src="js/bootstrap.min.js"></script>-->
+ <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+
+    </script>
+  </body>
+</html>
+
